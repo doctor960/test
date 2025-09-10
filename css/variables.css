@@ -1,0 +1,9 @@
+:root {
+  --main-color: #242121;
+  --h1-color: #0D302C;
+  --h2-color: #01353E;
+  --celadon-color: #00B2A0;
+
+  --main-family: "Roboto Condensed", sans-serif;
+  --h2-family: "Raleway", sans-serif;          
+}

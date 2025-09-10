@@ -1,0 +1,43 @@
+body {
+  font-family: var(--main-family);
+  color: var(--main-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.28;
+  letter-spacing: 0.6px;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1220px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.general__title {
+font-family: var(--h2-family);
+font-size: 48px;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.6px;
+color: var(--h2-color);
+text-align: center;
+text-transform: uppercase;
+
+position: relative;
+}
+
+.general__title::after {
+  content: "";
+  width: 48px;
+  height: 85px;
+
+  color: var(--celadon-color);
+  font-size: 72px;
+
+  position: absolute;
+  background-image: url(../images/h2-after.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
