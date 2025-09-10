@@ -63,15 +63,13 @@
         <button class="header__btn">
           <span class="burger-line"></span>
         </button>
-
-
         
           <!-- бургер меню  -->
         <div class="burger-menu rightside-menu--close">
 
         <!-- кнопка-крестик -->
           <button class="burger-menu__close">
-            <img class="burger-menu__img" src="images/Krest.svg" alt="close img">
+            <img class="burger-menu__img" src="images/krest.svg" alt="close img">
           </button>
         <!-- кнопка-крестик -->
 
@@ -169,7 +167,7 @@
         </div>
     </section>
 
-    <section class="conditions">
+    <!-- <section class="conditions">
       <div class="container">
         <h2 class="conditions__title general__title">В  ШКОЛЕ ВЫ ПОЛУЧИТЕ</h2>
         <div class="conditions-top">
@@ -215,7 +213,90 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+
+
+
+
+
+
+    <section class="conditions">
+      <div class="container">
+        <h2 class="conditions__title general__title">В  ШКОЛЕ ВЫ ПОЛУЧИТЕ</h2>
+        <div class="conditions-top">
+        
+          <div class="accommodation">
+            <h3 class="accommodation__title conditions-top__title">ПРОЖИВАНИЕ</h3>
+            <p class="accommodation__text conditions-top__text">Наша школа серфинга находится в 100 м от океанского побережья. К услугам гостей открытый бассейн и бесплатный Wi-Fi. Из верхней террасы открывается вид на океан. Расстояние до центра города 15 мин.</p>
+          </div>
+
+          <div class="flight">
+            <h3 class="flight__title conditions-top__title">ПЕРЕЛЕТ И СТРАХОВКУ</h3>
+            <p class="flight__text conditions-top__text">Все участники программы застрахованы страховой компанией Allianz.<br>Перелет из Тенерифе до острова Лансароте  и обратно входит в стоимость программы</p>
+          </div>
+
+          <div class="education">
+            <h3 class="education__title conditions-top__title">ОБУЧЕНИЕ И ЭКИПИРОВКУ</h3>
+            <p class="education__text conditions-top__text">Все оборудование и экипировка известных производителей и предоставляется на весь курс программы. Тренировочный процесс начинается с определения вашего уровня катания</p>
+          </div>
+        </div>
+
+        <div class="conditions-bottom">
+          
+          <ul class="visit__list">
+  <li class="visit__item">
+    <div class="progress-bar">
+      <div class="progress-fill" data-percent="85"></div>
+      <span class="progress-value">85%</span>
+    </div>
+    <!-- <span class="visit_interest">85%</span> -->
+    <p class="visit__text">Приехали второй раз</p>
+  </li>
+  <li class="visit__item">
+    <div class="progress-bar">
+      <div class="progress-fill" data-percent="95"></div>
+      <span class="progress-value">95%</span>
+    </div>
+    <!-- <span class="visit_interest">95%</span> -->
+    <p class="visit__text">Научились кататься</p>
+  </li>
+  <li class="visit__item">
+    <div class="progress-bar">
+      <div class="progress-fill" data-percent="99"></div>
+      <span class="progress-value">99%</span>
+    </div>
+    <!-- <span class="visit_interest">99%</span> -->
+    <p>Довольных клиентов</p>
+  </li>
+</ul>
+
+          <div class="methodology">
+            <p class="methodology__text">Огромным преимуществом нашей школы является собственная методика обучения. Мы разработали собственный стиль обучения серфингу, который позволяет новичкам максимально быстро встать на доску.</p>
+            <p class="methodology__text">Именно наша методика и наши преподаватели позволили нам пройти аттестацию Федерации серфинга Канарских островов - FEDERACIÓN CANARIA DE SURF. Это означает, что наша школа соответствует всем мировым стандартам. Переаттестация производится ежегодно и это позволяет нам всегда стремиться к улучшению обучения.</p>
+          </div>
+        </div>
+      </div>
+    </section>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <section class="peaks">
       
@@ -386,9 +467,11 @@
                 <p class="slider__top-text">Экипировка и гаджеты</p>
               </div>
             </div>
-          </div>
-
+          </div> 
         </div>
+
+        <button class="slider-arrow slider-prev">&#10094;</button>
+        <button class="slider-arrow slider-next">&#10095;</button>
 
     </section>
 
@@ -487,7 +570,8 @@
         <div class="bid__inner">
           <form class="bid__form" action="">
             <input class="form__name" type="text" placeholder="Имя">
-            <input class="form__phone" type="tel" placeholder="Телефон">
+            <input class="form__phone" type="tel" placeholder="Телефон" id="phone">
+            <small class="error-msg" id="phoneError"></small>
             <textarea class="form__message" placeholder="Оставьте сообщение, и мы свяжемся с Вами" name=""></textarea>
             <button class="form__btn" type="submit">ОТПРАВИТЬ</button>
           </form>
@@ -535,6 +619,14 @@
       </a>
     </div>
   </footer>
+
+  <div class="modal" id="successModal">
+  <div class="modal__content">
+    <span class="modal__close">&times;</span>
+    <h2>Спасибо!</h2>
+    <p>Мы свяжемся с вами в ближайшее время.</p>
+  </div>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

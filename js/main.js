@@ -288,10 +288,141 @@ video.addEventListener('ended', () => {
   $(function() {
   $('.slider__top').slick({
     dots: true,
-    arrows: false,
     fade: true,
-    autoplay: true
+    autoplay: true,
+    arrows: true,
+    prevArrow: $('.slider-prev'),
+    nextArrow: $('.slider-next'),
   });
 });
+
+
+
+// Модалка
+
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.querySelector(".bid__form");
+  const modal = document.getElementById("successModal");
+  const closeBtn = modal.querySelector(".modal__close");
+
+  const phoneInput = document.getElementById("phone");
+  const phoneError = document.getElementById("phoneError");
+
+  // Разрешаем только цифры, +, пробелы, скобки
+  phoneInput.addEventListener("input", function() {
+    const validChars = /^[0-9+\s()]*$/;
+
+    if (!validChars.test(phoneInput.value)) {
+      phoneInput.classList.add("error");
+      phoneError.textContent = "Введите корректный номер";
+      phoneError.style.display = "block";
+    } else {
+      phoneInput.classList.remove("error");
+      phoneError.style.display = "none";
+    }
+  });
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = form.querySelector("input[placeholder='Имя']").value.trim();
+    const phone = phoneInput.value.trim();
+
+    // Проверка на пустые поля
+    if (!name || !phone) {
+      alert("Пожалуйста, заполните все поля!");
+      return;
+    }
+
+    // Проверка телефона
+    const validChars = /^[0-9+\s()]+$/;
+    if (!validChars.test(phone)) {
+      phoneInput.classList.add("error");
+      phoneError.textContent = "Введите корректный номер";
+      phoneError.style.display = "block";
+      return;
+    }
+
+    // Всё ок → показываем модалку
+    modal.style.display = "block";
+    form.reset();
+  });
+
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+    const progressSection = document.querySelector('.conditions-bottom');
+    const progressBars = document.querySelectorAll('.progress-fill');
+    let animated = false;
+    
+    // Функция для проверки видимости элемента
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+      );
+    }
+    
+    // Функция для анимации прогресс-баров
+    function animateProgressBars() {
+      if (animated) return;
+      
+      progressBars.forEach(bar => {
+        const percent = bar.getAttribute('data-percent');
+        // Устанавливаем ширину напрямую, без CSS переменной
+        bar.style.width = percent + '%';
+      });
+      
+      animated = true;
+    }
+    
+    // Проверяем при загрузке страницы
+    if (isElementInViewport(progressSection)) {
+      animateProgressBars();
+    }
+    
+    // Проверяем при скролле
+    window.addEventListener('scroll', function() {
+      if (isElementInViewport(progressSection) && !animated) {
+        animateProgressBars();
+      }
+    });
+    
+    // Также проверяем при изменении размера окна
+    window.addEventListener('resize', function() {
+      if (isElementInViewport(progressSection) && !animated) {
+        animateProgressBars();
+      }
+    });
+  });
+
+  
 
 
