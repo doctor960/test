@@ -1249,6 +1249,11 @@ text-transform: uppercase;
   text-align: left;
 }
 
+@media (max-width: 1115px) {
+  .slider-prev { left: 0; }
+  .slider-next { right: 0; }
+}
+
 @media (max-width: 1085px) {
   .info__text {
     gap: 20px 50px;
@@ -1266,9 +1271,7 @@ text-transform: uppercase;
 }
 
 @media (max-width: 1017px) {
-  .slider-prev { left: 0; }
-  .slider-next { right: 0; }
-
+  
   .info__text {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 50px;
