@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
         burgerMenu.classList.remove('rightside-menu--close');
         burgerMenu.classList.add('rightside-menu--open');
         overlay.classList.add('overlay--active');
-        document.body.style.overflow = 'hidden'; // Блокируем скролл
+        document.body.style.overflow = 'hidden'; 
     }
     
     function closeMenu() {
         burgerMenu.classList.remove('rightside-menu--open');
         burgerMenu.classList.add('rightside-menu--close');
         overlay.classList.remove('overlay--active');
-        document.body.style.overflow = ''; // Разблокируем скролл
+        document.body.style.overflow = ''; 
     }
     
     burgerBtn.addEventListener('click', openMenu);
@@ -136,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function() {
   messageError.classList.add("error-msg");
   messageInput.insertAdjacentElement("afterend", messageError);
 
-  // Проверка телефона на ввод допустимых символов
   phoneInput.addEventListener("input", function() {
     const validChars = /^[0-9+\s()]*$/;
     if (!validChars.test(phoneInput.value)) {
@@ -155,7 +154,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const phone = phoneInput.value.trim();
     const message = messageInput.value.trim();
 
-    // Проверка имени
     if (!name) {
       nameError.textContent = "Заполните поле";
       nameError.style.display = "block";
@@ -164,7 +162,6 @@ document.addEventListener("DOMContentLoaded", function() {
       nameError.style.display = "none";
     }
 
-    // Проверка телефона
     const validPhone = /^[0-9+\s()]+$/;
     if (!phone) {
       phoneError.textContent = "Заполните поле";
@@ -178,7 +175,6 @@ document.addEventListener("DOMContentLoaded", function() {
       phoneError.style.display = "none";
     }
 
-    // Проверка textarea
     if (!message) {
       messageError.textContent = "Заполните поле";
       messageError.style.display = "block";
@@ -189,17 +185,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (hasError) return;
 
-    // Всё ок → показываем модалку
     modal.style.display = "block";
     form.reset();
   });
 
-  // Закрытие модалки по кнопке
   closeBtn.addEventListener("click", function() {
     modal.style.display = "none";
   });
 
-  // Закрытие модалки при клике вне неё
   window.addEventListener("click", function(e) {
     if (e.target === modal) {
       modal.style.display = "none";
@@ -207,46 +200,46 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
- document.addEventListener('DOMContentLoaded', function() {
-    const progressSection = document.querySelector('.conditions-bottom');
-    const progressBars = document.querySelectorAll('.progress-fill');
-    let animated = false;
+document.addEventListener('DOMContentLoaded', function() {
+  const progressSection = document.querySelector('.conditions-bottom');
+  const progressBars = document.querySelectorAll('.progress-fill');
+  let animated = false;
+  
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+  }
+
+  function animateProgressBars() {
+    if (animated) return;
     
-    function isElementInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      return (
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.bottom >= 0
-      );
-    }
+    progressBars.forEach(bar => {
+      const percent = bar.getAttribute('data-percent');
+      bar.style.width = percent + '%';
+    });
+    
+    animated = true;
+  }
 
-    function animateProgressBars() {
-      if (animated) return;
-      
-      progressBars.forEach(bar => {
-        const percent = bar.getAttribute('data-percent');
-        bar.style.width = percent + '%';
-      });
-      
-      animated = true;
-    }
+  if (isElementInViewport(progressSection)) {
+    animateProgressBars();
+  }
 
-    if (isElementInViewport(progressSection)) {
+  window.addEventListener('scroll', function() {
+    if (isElementInViewport(progressSection) && !animated) {
       animateProgressBars();
     }
-
-    window.addEventListener('scroll', function() {
-      if (isElementInViewport(progressSection) && !animated) {
-        animateProgressBars();
-      }
-    });
-
-    window.addEventListener('resize', function() {
-      if (isElementInViewport(progressSection) && !animated) {
-        animateProgressBars();
-      }
-    });
   });
+
+  window.addEventListener('resize', function() {
+    if (isElementInViewport(progressSection) && !animated) {
+      animateProgressBars();
+    }
+  });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   const counters = document.querySelectorAll('.indicators__title');

@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WAWE</title>
-  <!-- подключаем шрифты -->
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Roboto Condensed 300,400,700 normal -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
-  <!-- Roboto Condensed 300,400, italic -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
-  <!-- Raleway 600,700 normal -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
 
@@ -39,22 +39,22 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link" href="#">О нас</a>
+              <a class="nav__link" href="#info">О нас</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Услуги</a>
+              <a class="nav__link" href="#conditions">Услуги</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Стоимость</a>
+              <a class="nav__link" href="#packages">Стоимость</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Блог</a>
+              <a class="nav__link" href="#slider">Блог</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Команда</a>
+              <a class="nav__link" href="#team">Команда</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Контакты</a>
+              <a class="nav__link" href="#bid">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -135,7 +135,7 @@
 
   <main class="main">
 
-    <section class="info">
+    <section class="info" id="info">
       <div class="container">
         <h2 class="info__title general__title"> О  ШКОЛЕ, О СЕРФИНГЕ, О КАНАРАХ </h2>
         <ul class="info__text">
@@ -167,109 +167,47 @@
         </div>
     </section>
 
-    <!-- <section class="conditions">
+    <section class="conditions" id="conditions">
       <div class="container">
         <h2 class="conditions__title general__title">В  ШКОЛЕ ВЫ ПОЛУЧИТЕ</h2>
-        <div class="conditions-top">
-        
+        <div class="conditions-top">        
           <div class="accommodation">
             <h3 class="accommodation__title conditions-top__title">ПРОЖИВАНИЕ</h3>
             <p class="accommodation__text conditions-top__text">Наша школа серфинга находится в 100 м от океанского побережья. К услугам гостей открытый бассейн и бесплатный Wi-Fi. Из верхней террасы открывается вид на океан. Расстояние до центра города 15 мин.</p>
           </div>
-
           <div class="flight">
             <h3 class="flight__title conditions-top__title">ПЕРЕЛЕТ И СТРАХОВКУ</h3>
             <p class="flight__text conditions-top__text">Все участники программы застрахованы страховой компанией Allianz.<br>Перелет из Тенерифе до острова Лансароте  и обратно входит в стоимость программы</p>
           </div>
-
           <div class="education">
             <h3 class="education__title conditions-top__title">ОБУЧЕНИЕ И ЭКИПИРОВКУ</h3>
             <p class="education__text conditions-top__text">Все оборудование и экипировка известных производителей и предоставляется на весь курс программы. Тренировочный процесс начинается с определения вашего уровня катания</p>
           </div>
         </div>
-
-        <div class="conditions-bottom">
+        <div class="conditions-bottom">          
           <ul class="visit__list">
             <li class="visit__item">
-              <img src="images/visit-img1.svg" alt="visit one">
-              <span class="visit_interest">85%</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-percent="85"></div>
+                <span class="progress-value">85%</span>
+              </div>
               <p class="visit__text">Приехали второй раз</p>
             </li>
             <li class="visit__item">
-              <img src="images/visit-img2.svg" alt="visit two">
-              <span class="visit_interest">95%</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-percent="95"></div>
+                <span class="progress-value">95%</span>
+              </div>
               <p class="visit__text">Научились кататься</p>
             </li>
             <li class="visit__item">
-              <img class="visit__img" src="images/visit-img3.svg" alt="visit three">
-              <span class="visit_interest">99%</span>
+              <div class="progress-bar">
+                <div class="progress-fill" data-percent="99"></div>
+                <span class="progress-value">99%</span>
+              </div>
               <p>Довольных клиентов</p>
             </li>
           </ul>
-
-          <div class="methodology">
-            <p class="methodology__text">Огромным преимуществом нашей школы является собственная методика обучения. Мы разработали собственный стиль обучения серфингу, который позволяет новичкам максимально быстро встать на доску.</p>
-            <p class="methodology__text">Именно наша методика и наши преподаватели позволили нам пройти аттестацию Федерации серфинга Канарских островов - FEDERACIÓN CANARIA DE SURF. Это означает, что наша школа соответствует всем мировым стандартам. Переаттестация производится ежегодно и это позволяет нам всегда стремиться к улучшению обучения.</p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-
-
-
-
-
-    <section class="conditions">
-      <div class="container">
-        <h2 class="conditions__title general__title">В  ШКОЛЕ ВЫ ПОЛУЧИТЕ</h2>
-        <div class="conditions-top">
-        
-          <div class="accommodation">
-            <h3 class="accommodation__title conditions-top__title">ПРОЖИВАНИЕ</h3>
-            <p class="accommodation__text conditions-top__text">Наша школа серфинга находится в 100 м от океанского побережья. К услугам гостей открытый бассейн и бесплатный Wi-Fi. Из верхней террасы открывается вид на океан. Расстояние до центра города 15 мин.</p>
-          </div>
-
-          <div class="flight">
-            <h3 class="flight__title conditions-top__title">ПЕРЕЛЕТ И СТРАХОВКУ</h3>
-            <p class="flight__text conditions-top__text">Все участники программы застрахованы страховой компанией Allianz.<br>Перелет из Тенерифе до острова Лансароте  и обратно входит в стоимость программы</p>
-          </div>
-
-          <div class="education">
-            <h3 class="education__title conditions-top__title">ОБУЧЕНИЕ И ЭКИПИРОВКУ</h3>
-            <p class="education__text conditions-top__text">Все оборудование и экипировка известных производителей и предоставляется на весь курс программы. Тренировочный процесс начинается с определения вашего уровня катания</p>
-          </div>
-        </div>
-
-        <div class="conditions-bottom">
-          
-          <ul class="visit__list">
-  <li class="visit__item">
-    <div class="progress-bar">
-      <div class="progress-fill" data-percent="85"></div>
-      <span class="progress-value">85%</span>
-    </div>
-    <!-- <span class="visit_interest">85%</span> -->
-    <p class="visit__text">Приехали второй раз</p>
-  </li>
-  <li class="visit__item">
-    <div class="progress-bar">
-      <div class="progress-fill" data-percent="95"></div>
-      <span class="progress-value">95%</span>
-    </div>
-    <!-- <span class="visit_interest">95%</span> -->
-    <p class="visit__text">Научились кататься</p>
-  </li>
-  <li class="visit__item">
-    <div class="progress-bar">
-      <div class="progress-fill" data-percent="99"></div>
-      <span class="progress-value">99%</span>
-    </div>
-    <!-- <span class="visit_interest">99%</span> -->
-    <p>Довольных клиентов</p>
-  </li>
-</ul>
-
           <div class="methodology">
             <p class="methodology__text">Огромным преимуществом нашей школы является собственная методика обучения. Мы разработали собственный стиль обучения серфингу, который позволяет новичкам максимально быстро встать на доску.</p>
             <p class="methodology__text">Именно наша методика и наши преподаватели позволили нам пройти аттестацию Федерации серфинга Канарских островов - FEDERACIÓN CANARIA DE SURF. Это означает, что наша школа соответствует всем мировым стандартам. Переаттестация производится ежегодно и это позволяет нам всегда стремиться к улучшению обучения.</p>
@@ -278,34 +216,11 @@
       </div>
     </section>  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section class="peaks">
-      
+    <section class="peaks">     
       <div class="container">
         <h2 class="general__title peaks__title">ПОКОРЯЙ ВЕРШИНЫ</h2>
-        <div class="peaks__inner">
-          
-          <ul class="peaks__list">
-            
+        <div class="peaks__inner">          
+          <ul class="peaks__list">           
             <li class="peaks__item">
               <p class="peaks__text">Преподаватели нашей школы серфинга в числе лучших серферов на Канарских островах. Среди них - чемпион Европы по лонгборду, который с радостью поделится опытом как с новичками, так и более опытными серферами. Все члены преподавательского состава являются сертифицированными членами Федерации серфинга Канарских островов. Некоторые из них знают русский язык, что определенно позиционирует нас как русскую школу серфинга за границей!</p>
             </li>
@@ -365,11 +280,8 @@
           <li class="gallery-foto__item" data-category="tourists">
             <img class="gallery-foto__img" src="images/foto-6.jpg" alt="foto-6">
           </li>
-        </ul>
-        
-          <button class="gallery-foto__btn">ПОКАЗАТЬ ЕЩЕ</button>
-        
-        
+        </ul>       
+          <button class="gallery-foto__btn">ПОКАЗАТЬ ЕЩЕ</button>       
       </div>
     </section>
 
@@ -382,8 +294,6 @@
       </div>
     </section>
 
-    
-
     <section class="video">
       <div class="container">
         <div class="video__inner">
@@ -394,8 +304,6 @@
         </div>
       </div>
     </section>
-
-    <!-- poster="images/video-poster.jpg" не работает стандартный перввый кадр в хроме, опера-->
 
     <section class="indicators">
       <div class="container">
@@ -420,65 +328,61 @@
       </div>
     </section>
 
-    <section class="slider">
+    <section class="slider" id="slider">
       <div class="container">
         <h2 class="slider__title general__title">БЛОГ</h2>
       </div>
 
-      <div class="slider__top">  <!-- этот класс подключается к js и на него вешается слик-слайдер  -->
-
-          <!-- обвёртка которая идёт после родителя(к которому мы подключили слайдер) будет inline-blok(в данном случае это <div class="top__slider-item">) -->
-          
-            <div class="slider__top-item">  <!-- этот класс слик-слайдер сделал inline-blok -->
-            <div class="slider__top-inner"> <!-- поэтому пришлось каждому из 3х слайдеров делать обвёртку и задавать уже здесь дисплей флекс -->
-              <img class="slider__top-img" src="images/slider-img.jpg" alt="images">
-              <div class="slider__top-info">
-                <h2 class="slider__top-title">СЕРФ ТУР</h2>
-                <p class="slider__top-text">вещи для отдыха и обучения</p>
-              </div>
+      <div class="slider__top">  
+        <div class="slider__top-item"> 
+          <div class="slider__top-inner"> 
+            <img class="slider__top-img" src="images/slider-img.jpg" alt="images">
+            <div class="slider__top-info">
+              <h2 class="slider__top-title">СЕРФ ТУР</h2>
+              <p class="slider__top-text">вещи для отдыха и обучения</p>
             </div>
           </div>
-
-          <div class="slider__top-item">  
-            <div class="slider__top-inner"> 
-              <img class="slider__top-img" src="images/slider-img.jpg" alt="images">
-              <div class="slider__top-info">
-                <h2 class="slider__top-title">Самое главное</h2>
-                <p class="slider__top-text">Серфинг-экипировка</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="slider__top-item">
-            <div class="slider__top-inner">
-              <img class="slider__top-img" src="images/slider-img.jpg" alt="images">
-              <div class="slider__top-info">
-                <h2 class="slider__top-title">Здоровье</h2>
-                <p class="slider__top-text">Аптечка и защита</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="slider__top-item">
-            <div class="slider__top-inner">
-              <img class="slider__top-img" src="images/slider-img.jpg" alt="images">
-              <div class="slider__top-info">
-                <h2 class="slider__top-title">Вещи</h2>
-                <p class="slider__top-text">Экипировка и гаджеты</p>
-              </div>
-            </div>
-          </div> 
         </div>
+
+        <div class="slider__top-item">  
+          <div class="slider__top-inner"> 
+            <img class="slider__top-img" src="images/slider-img.jpg" alt="images">
+            <div class="slider__top-info">
+              <h2 class="slider__top-title">Самое главное</h2>
+              <p class="slider__top-text">Серфинг-экипировка</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider__top-item">
+          <div class="slider__top-inner">
+            <img class="slider__top-img" src="images/slider-img.jpg" alt="images">
+            <div class="slider__top-info">
+              <h2 class="slider__top-title">Здоровье</h2>
+              <p class="slider__top-text">Аптечка и защита</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider__top-item">
+          <div class="slider__top-inner">
+            <img class="slider__top-img" src="images/slider-img.jpg" alt="images">
+            <div class="slider__top-info">
+              <h2 class="slider__top-title">Вещи</h2>
+              <p class="slider__top-text">Экипировка и гаджеты</p>
+            </div>
+          </div>
+        </div> 
+      </div>
 
         <button class="slider-arrow slider-prev">&#10094;</button>
         <button class="slider-arrow slider-next">&#10095;</button>
 
     </section>
 
-    <section class="team">
+    <section class="team" id="team">
       <div class="container">
         <h2 class="general__title team__title">НАША КОМАНДА</h2>
-        <!-- ul.team__list>li.team__item*3>img.team__img> -->
         <div class="team__inner">
           <figure class="team__list">
             <div class="team__img-wrapper">
@@ -497,8 +401,7 @@
               <strong class="team__name">Mary</strong>
               <span class="team__text">инстуктор</span>
           </figcaption>
-          </figure> 
-          
+          </figure>          
           <figure class="team__list">
             <div class="team__img-wrapper">
             <img class="team__img" src="images/olga.jpg" alt="olga">
@@ -507,13 +410,12 @@
               <strong class="team__name">Ольга</strong>
               <span class="team__text">инстуктор</span>
           </figcaption>
-          </figure>
-          
+          </figure>          
       </div>
       </div>
     </section>
 
-    <section class="packages">
+    <section class="packages" id="packages">
       <div class="container">
         <h2 class="general__title packages__title">ПАКЕТЫ УСЛУГ</h2>
         <ul class="packages__list">
@@ -526,11 +428,10 @@
             <p class="packages__text">Страховка</p>
             <p class="packages__text">Вечеринка с угощениями и дискотекой</p>
             
-              <h4 class="packages__price packages__price-bottom">
-                <strong class="packages__number">450</strong>
-                <span class="packages__dollar">$</span>
-              </h4>
-            
+            <h4 class="packages__price packages__price-bottom">
+              <strong class="packages__number">450</strong>
+              <span class="packages__dollar">$</span>
+            </h4>            
           </li>
           <li class="packages__item">
             <h3 class="packages__subtitle">Профи</h3>
@@ -543,11 +444,10 @@
             <p class="packages__text">Авиа перелет Тенерифе -Лансароте - Тенерифе </p>
             <p class="packages__text">Завтраки на вилле</p>
             
-              <h4 class="packages__price">
-                <strong class="packages__number">950</strong>
-                <span class="packages__dollar">$</span>
-              </h4>
-            
+            <h4 class="packages__price">
+              <strong class="packages__number">950</strong>
+              <span class="packages__dollar">$</span>
+            </h4>           
           </li>
           <li class="packages__item">
             <h3 class="packages__subtitle">Мастер</h3>
@@ -560,17 +460,16 @@
             <p class="packages__text">Авиа перелет Тенерифе -Лансароте - Тенерифе </p>
             <p class="packages__text">Завтраки и ужины на вилле</p>
             
-              <h4 class="packages__price">
-                <strong class="packages__number">1450</strong>
-                <span class="packages__dollar">$</span>
-              </h4>
-            
+            <h4 class="packages__price">
+              <strong class="packages__number">1450</strong>
+              <span class="packages__dollar">$</span>
+            </h4>            
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="bid">
+    <section class="bid" id="bid">
       <div class="container">
         <h2 class="general__title form__title">ОСТАВИТЬ ЗАЯВКУ</h2>
         <div class="bid__inner">

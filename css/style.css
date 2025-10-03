@@ -81,14 +81,11 @@
   justify-content: center;
 }
 
-/* бургер меню */
-
 .header__btn {
   display: none;
   position: relative;
   width: 50px;
   height: 30px;
-  /* margin-right: 30px; */
 }
 
 .burger-line {
@@ -116,12 +113,10 @@
     bottom: 0;
 }
 
-
-/* Бургер-меню */
 .burger-menu {
   position: fixed;
     top: 0;
-    right: -100%; /* Скрыто за экраном */
+    right: -100%; 
     width: 300px;
     height: 100vh;
     background: #09667df2;
@@ -130,8 +125,6 @@
     overflow-y: auto;
 }
 
-
-/* Контент меню */
 .burger-menu__inner {
     position: relative;
     z-index: 1;
@@ -139,7 +132,6 @@
     color: white;
 }
 
-/* Кнопка закрытия */
 .burger-menu__close {
     position: absolute;
     top: 20px;
@@ -150,7 +142,6 @@
     z-index: 1002;
 }
 
-/* Состояния меню */
 .rightside-menu--close {
     right: -100%;
 }
@@ -159,7 +150,6 @@
     right: 0;
 }
 
-/* Оверлей */
 .overlay {
     position: fixed;
     top: 0;
@@ -177,9 +167,6 @@
     opacity: 1;
     visibility: visible;
 }
-
-
-/* Стили для контента меню */
 
 .burger-menu__list {
     margin-bottom: 30px;
@@ -269,10 +256,6 @@
 
 /* section conditions start */
 
-
-
-/* Стили для индикаторов прогресса */
-/* Стили для индикаторов прогресса */
 .progress-bar {
   width: 200px;
   height: 20px;
@@ -301,17 +284,6 @@
   font-size: 14px;
   z-index: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .conditions {
   background-color: #F8F8F8;
@@ -516,7 +488,7 @@ text-transform: uppercase;
 .gallery-nav__link {
   display: inline-block;
 
-  transition: transform 0.3s ease, color 0.3s ease; /* Плавный эффект */
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .gallery-nav__link:hover {
@@ -557,10 +529,8 @@ text-transform: uppercase;
   
   object-fit: cover; 
   cursor: pointer;   
-  overflow: hidden; /* Обрезаем изображение, чтобы применилась clip-path маска */
+  overflow: hidden;
 }
-
-
 
 .gallery-foto__item:nth-child(1) {
   grid-column: span 2;
@@ -642,8 +612,6 @@ text-transform: uppercase;
 
 .video {
   margin-bottom: 85px;
-
-  /* border: 1px solid red; */
 }
 
 .video__inner {
@@ -663,7 +631,7 @@ text-transform: uppercase;
 .video__content {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* адаптивно растягиваем видео */
+  object-fit: cover; 
   position: absolute;
   top: 0;
   left: 0;
@@ -671,16 +639,15 @@ text-transform: uppercase;
 
 .video__content {
   z-index: 2;
-  opacity: 0;            /* скрываем видео до клика */
-  pointer-events: none;  /* клики идут на кнопку play */
+  opacity: 0;            
+  pointer-events: none;  
   transition: opacity 0.3s ease;
 }
 
 .video__poster {
-  z-index: 1; /* пока видим poster */
+  z-index: 1; 
 }
 
-/* Изначально play виден, pause скрыта */
 .video__play { opacity: 1; pointer-events: auto; }
 .video__pause { opacity: 0; pointer-events: none; }
 
@@ -690,8 +657,8 @@ text-transform: uppercase;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 10%;           /* например 10% ширины блока */
-  max-width: 120px;     /* ограничение для больших экранов */
+  width: 10%;           
+  max-width: 120px;    
   height: auto;
   transform: translate(-50%, -50%);
 
@@ -700,13 +667,11 @@ text-transform: uppercase;
   transition: transform 0.15s ease, opacity 0.15s ease;
 }
 
-/* Когда видео играет */
 .video__inner.is-playing .video__play {
   opacity: 0;
   pointer-events: none;
 }
 
-/* pause видна только если играет и hover */
 .video__inner.is-playing:hover .video__pause {
   opacity: 1;
   pointer-events: auto;
@@ -758,7 +723,7 @@ text-transform: uppercase;
 }
 
 .slider__top {
-   position: relative;
+  position: relative;
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -767,14 +732,14 @@ text-transform: uppercase;
 
 .slider__top-item {
   position: relative;
-  max-height: 600px; /* можно заменить на фиксированную высоту, например 600px */
+  max-height: 600px; 
   overflow: hidden;
 }
 
 .slider__top-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* картинка обрезается красиво */
+  object-fit: cover; 
   display: block;
 }
 
@@ -782,12 +747,12 @@ text-transform: uppercase;
   position: absolute;
   top: 50%;
   left: 70%;
-  transform: translate(-50%, -50%); /* центрируем */
+  transform: translate(-50%, -50%); 
   text-align: center;
   color: #fff;
   width: 100%;
   max-width: 900px;
-  padding: 0 20px; /* чтобы текст не прилипал к краям на мобиле */
+  padding: 0 20px; 
 }
 
 .slider__top-title {
@@ -797,15 +762,12 @@ text-transform: uppercase;
   line-height: 1.16;
   margin-bottom: 20px;
   text-transform: uppercase;
-  white-space: normal; /* разрешаем переносы */
+  white-space: normal; 
 }
 
 .slider__top-text {
   color: #fff;
 }
-
-
-
 
 .slider-arrow {
   position: absolute;
@@ -824,12 +786,12 @@ text-transform: uppercase;
   background: rgba(0,0,0,0.8);
 }
 
-.slider-prev { left: calc((100% - 1000px)/2 - 40px); } /* подстраиваем под max-width слайдера */
-.slider-next { right: calc((100% - 1000px)/2 - 40px); }
-
-
-
-
+.slider-prev { 
+  left: calc((100% - 1000px)/2 - 40px); 
+} 
+.slider-next {
+  right: calc((100% - 1000px)/2 - 40px); 
+}
 
 /* section slider end */
 
@@ -845,23 +807,20 @@ text-transform: uppercase;
 
 .team__list {
   cursor: pointer;
-  overflow: hidden; /* Обрезаем увеличенное фото */
+  overflow: hidden; 
 
-   flex: 1 1 0;              /* карточки резиновые, будут сжиматься адаптивно */
+  flex: 1 1 0;           
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column; 
 }
 
 .team__inner {
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: space-between; 
   gap: 100px;
 }
 
 .team__img {
-  border: 1px solid red;
   width: 100%;
   margin-bottom: 25px;
   height: 100%;
@@ -869,37 +828,32 @@ text-transform: uppercase;
   object-fit: cover;
   transform-origin: center center;
   will-change: transform;
-  border: none;             /* если был бордер на img — убираем */
+  border: none;             
 }
 
 .team__img-wrapper {
-  overflow: hidden;  /* ограничиваем область фото */
+  overflow: hidden; 
 
   width: 100%;
-  aspect-ratio: 11 / 15;      /* адаптивная высота относительно ширины */
+  aspect-ratio: 11 / 15;    
   
   transition: border-radius 0.4s ease, box-shadow 0.4s ease;
-  
 }
 
 .team__list:hover .team__img,
 .team__img-wrapper:hover .team__img {
-  transform: scale(1.08);   /* небольшой зум, регулируй число */
-  
+  transform: scale(1.08);    
 }
 
 .team__list:hover .team__img-wrapper {
-  border-radius: 15px; /* плавное скругление углов */
+  border-radius: 15px; 
 }
-
 
 .team__subtitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  
 }
 
 .team__name {
@@ -935,21 +889,17 @@ text-transform: uppercase;
 
 .packages__item {
 
-  position: relative; /* нужно для псевдоэлемента */
-  overflow: hidden;   /* чтобы точка не вылезала */
-
-
+  position: relative; 
+  overflow: hidden;   
 
   border-radius: 15px;
   padding: 45px 30px;
   
-
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
 
   transition: all 0.7s ease;
   cursor: pointer;
 }
-
 
 .packages__item::before {
   content: "";
@@ -965,7 +915,6 @@ text-transform: uppercase;
   z-index: 5;
 }
 
-/* анимация движения точки по периметру */
 @keyframes move-dot {
   0%   { top: -6px; left: -6px; }
   25%  { top: -6px; left: calc(100% - 6px); }
@@ -1111,7 +1060,7 @@ text-transform: uppercase;
 
   font-family: inherit;
 
-  overflow: hidden; /* скрываем внутренний скролл */
+  overflow: hidden;
   border: none;
   border-bottom: 2px solid #DADADA; 
 
@@ -1229,11 +1178,6 @@ text-transform: uppercase;
 
 /* footer end */
 
-
-
-
-
-/* Модалка по умолчанию скрыта */
 .modal {
   display: none; 
   position: fixed;
@@ -1243,15 +1187,13 @@ text-transform: uppercase;
   width: 100%;
   height: 100%;
   overflow: auto; 
-  /* background: rgba(0,0,0,0.6); */
+
   background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(3px); /* лёгкий blur */
+  backdrop-filter: blur(3px);
 }
 
-/* Контент окна */
 .modal__content {
   background: #fff;
-  /* margin: 15% auto; */
   margin: 0 auto;
   padding: 20px 30px;
   border-radius: 12px;
@@ -1267,7 +1209,6 @@ text-transform: uppercase;
   animation: fadeIn 0.3s ease;
 }
 
-/* Анимация */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-60%) scale(0.9); }
   to   { opacity: 1; transform: translateY(-50%) scale(1); }
@@ -1283,7 +1224,6 @@ text-transform: uppercase;
   color: #555;
 }
 
-/* Крестик */
 .modal__close {
   position: absolute;
   top: 10px;
@@ -1300,11 +1240,6 @@ text-transform: uppercase;
   color: #333;
 }
 
-/* Ошибка */
-/* input.error {
-  
-} */
-
 .error-msg {
   display: none;
   color: red;
@@ -1312,16 +1247,6 @@ text-transform: uppercase;
   margin-top: 5px;
   text-align: left;
 }
-
-
-
-
-
-
-
-
-
-/* медиа запросы */
 
 @media (max-width: 1085px) {
   .info__text {
@@ -1491,8 +1416,6 @@ text-transform: uppercase;
   .peaks__img {
     align-self: center;
   }
-  
-
 }
 
 @media (max-width: 835px) {
@@ -1575,15 +1498,7 @@ text-transform: uppercase;
   .slider__top-title {
     font-size: 35px;
   }
-
 }
-
-@media (max-width: 795px) {
-  /* .packages__price-bottom {
-    padding-top: 134px;
-  } */
-}
-
 
 @media (max-width: 750px) {
   .nav__list {
@@ -1601,7 +1516,6 @@ text-transform: uppercase;
   .conditions-top {
     gap: 10px 10px;
     flex-wrap: wrap;
-
   }
 
   .visit__list {
@@ -1614,7 +1528,7 @@ text-transform: uppercase;
   .bid__form {
     max-width: 500px;
     max-width: 100%;
-    overflow-x: hidden; /* чтобы точно ничего не уехало */
+    overflow-x: hidden; 
   }
 
   .bid-contacts {
@@ -1693,7 +1607,6 @@ text-transform: uppercase;
   .footer__list {
     font-size: 20px;
   }
-
 
   .nav__item:first-child {
     margin-left: 35px;
@@ -1777,7 +1690,7 @@ text-transform: uppercase;
   }
 
   .packages__item {
-     flex: 1 1 45%; /* две в ряд */
+    flex: 1 1 45%; 
     max-width: 280px;
   }
 
@@ -2065,7 +1978,6 @@ text-transform: uppercase;
     padding-bottom: 40px;
   }
 
-
   .slider__title {
     margin-bottom: 40px;
   }
@@ -2113,7 +2025,6 @@ text-transform: uppercase;
 }
 
 @media (max-width: 400px) {
-
   .packages__subtitle {
     margin-bottom: 10px;
   }
