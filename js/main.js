@@ -36,6 +36,27 @@ document.addEventListener('DOMContentLoaded', function() {
             closeMenu();
         }
     });
+
+
+    
+    const menuLinks = document.querySelectorAll('.burger-menu__list .nav__link');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // плавный скролл к секции
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
+
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+
+            // закрываем меню
+            closeMenu();
+        });
+    });
+
+
 });
 
 const links = document.querySelectorAll('.gallery-nav__link');
